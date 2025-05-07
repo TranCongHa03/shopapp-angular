@@ -9,22 +9,23 @@ import { OrderComponent } from './components/order/order.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { FormsModule } from '@angular/forms';
-import { 
-  HttpClientModule, 
-  HTTP_INTERCEPTORS 
+import { ReactiveFormsModule } from '@angular/forms';
+import {
+  HttpClientModule,
+  HTTP_INTERCEPTORS
 } from '@angular/common/http';
 import {TokenInterceptor} from './interceptors/token.interceptor'
 import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  declarations: [    
-    HomeComponent, 
+  declarations: [
+    HomeComponent,
     HeaderComponent,
-    FooterComponent, 
-    DetailProductComponent, 
-    OrderComponent, 
-    // OrderConfirmComponent, 
-    LoginComponent, 
+    FooterComponent,
+    DetailProductComponent,
+    OrderComponent,
+    // OrderConfirmComponent,
+    LoginComponent,
     RegisterComponent
   ],
   imports: [
@@ -32,6 +33,7 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     HttpClientModule,
     AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [
     {

@@ -1,8 +1,8 @@
-import { 
-    IsString, 
-    IsNotEmpty, 
-    IsPhoneNumber, 
-    IsNumber 
+import {
+    IsString,
+    IsNotEmpty,
+    IsPhoneNumber,
+    IsNumber
 } from 'class-validator';
 import { CartItemDTO } from './cart.item.dto';
 
@@ -40,7 +40,7 @@ export class OrderDTO {
   @IsString()
   coupon_code: string;
 
-  cart_items: CartItemDTO[]; // Thêm cart_items để lưu thông tin giỏ hàng
+  cart_items: { product_id : number, quantity: number} []; // Thêm cart_items để lưu thông tin giỏ hàng
 
 
   constructor(data: any) {
